@@ -1,0 +1,233 @@
+body {
+  text-align: center;
+  font-size: 1em;
+  font-family: verdana;
+  margin: 0;
+}
+h1 {
+  font-size: 1.5em;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 30px 0;
+  color: #333;
+}
+h1 .fas fa-info-circle{
+  cursor:pointer;
+}
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.row div {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+  margin: 4px;
+  text-align: center;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  max-height: 200px;
+}
+
+.row div.blue {
+  --background: #5aaec8;
+   --border-color: #5aaec8; 
+  animation: flip 0.5s ease forwards;
+}
+.row div.grey {
+  --background: #a1a1a1;
+ --border-color: #a1a1a1; 
+    animation: flip 0.5s ease forwards;
+}
+.row div.purple {
+  --background: #7c68e2;
+   --border-color: #7c68e2; 
+  animation: flip 0.5s ease forwards;
+}
+
+.row div:nth-child(2){
+  animation-delay: 0.2s;
+}
+.row div:nth-child(3){
+  animation-delay: 0.4s;
+}
+.row div:nth-child(4){
+  animation-delay: 0.6s;
+}
+.row div:nth-child(5){
+  animation-delay: 0.8s;
+}
+/* key pad */
+.keypad {
+  max-width: 500px;
+  max-height:200px;
+  margin: 10px auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.key {
+  width: 50px;
+  height: 48px;
+  margin: 5px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 0.75rem;
+  background-color: #e2e4e7;
+  color: #333; /* soft dark grey */
+  cursor: pointer;
+}
+
+.key:hover {
+  background-color: #cfd1d4;
+}
+
+.key.wide {
+  min-width: 60px;
+  font-size: 0.8rem;
+}
+
+/* Key colors */
+.key.blue-key {
+  background-color: #5aaec8;
+}
+
+.key.grey-key {
+  background-color: #a1a1a1;
+}
+
+.key.purple-key {
+  background-color: #7c68e2;
+}
+
+/* final modal pop up */
+.finalModal {
+  background: rgba(255,255,255,0.7);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.finalModal div {
+  max-width: 480px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 10% auto;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+.finalModal .solution {
+  color: #333;
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.finalModal .play-again{
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+}
+/* Rules pop up modal */
+.info-icon {
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.rules-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules-modal {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  text-align: left;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+/* .purple { color: #7c68e2; }
+.blue { color: #5aaec8; }
+.grey { color: grey; } */
+
+
+/* animations for the flips */
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+    background: white;
+    border-color: #333;
+  }
+  45% {
+    transform: rotateX(90deg);
+    background: white;
+    border-color: #333;
+  }
+  55% {
+    transform: rotateX(90deg);
+    background: var(--background);
+    border-color: var(--border-color);
+  }
+  100% {
+    transform: rotateX(0deg);
+    background: var(--background);
+    border-color: var(--border-color);
+    color:white;
+  }
+}
+.row.current div.filled{
+  animation: bounce 0.2s ease-in-out forwards;
+}
+@keyframes bounce{
+  0%{
+    transform: scale(1);
+    border-color: #ddd;
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+    border-color: #333;
+  }
+}
+
