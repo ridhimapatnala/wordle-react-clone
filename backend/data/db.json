@@ -69,8 +69,22 @@
   { "word": "rocks", "id": 67 },
   { "word": "mossy", "id": 68 },
   { "word": "shrub", "id": 69 },
-  { "word": "ledge", "id": 70 }
-    ],
+  { "word": "ledge", "id": 70 },
+  { "word": "burst", "id": 71 },
+  { "word": "flint", "id": 72 },
+  { "word": "bloom", "id": 73 },
+  { "word": "crust", "id": 74 },
+  { "word": "bough", "id": 75 },
+  { "word": "stone", "id": 76 },
+  { "word": "leafy", "id": 77 },
+  { "word": "barky", "id": 78 },
+  { "word": "thorn", "id": 79 },
+  { "word": "sedge", "id": 80 },
+  { "word": "cacti", "id": 81 },
+  { "word": "fuzzy", "id": 82 },
+  { "word": "crisp", "id": 83 },
+  { "word": "plume", "id": 84 }
+],
 
     "letters": [
       { "id": 1, "key": "Q" },
