@@ -9,7 +9,7 @@ function App() {
   const [showRules, setShowRules] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3001/solutions')
+    fetch(`${process.env.BACKEND_API_URL}/solutions`)
       .then(res => res.json())
       .then(json => {
         const randomSolution = json[Math.floor(Math.random() * json.length)];
