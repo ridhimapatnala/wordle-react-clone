@@ -4,7 +4,7 @@ const Keypad = ({ usedKeys, handleKeyUp }) => {
   const [letters, setLetters] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.BACKEND_API_URL}/letters`)
+    fetch(`${process.env.REACT_APP_BACKEND_API_URL}/letters`)
       .then((res) => res.json())
       .then((json) => setLetters(json));
   }, []);
